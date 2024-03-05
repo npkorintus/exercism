@@ -49,7 +49,6 @@ export function limesToCut(wedgesNeeded, limes) {
 
   while (wedgesNeeded > 0 && limes.length > 0) {
     let size = limes[0];
-    console.log('size: ', size)
 
     switch (size) {
       case 'small':
@@ -65,7 +64,7 @@ export function limesToCut(wedgesNeeded, limes) {
         count++;
         break;
       default:
-        break;
+        //do nothing
     }
 
     limes.shift();
@@ -82,5 +81,11 @@ export function limesToCut(wedgesNeeded, limes) {
  * @returns {string[]} remaining orders after the time is up
  */
 export function remainingOrders(timeLeft, orders) {
-  throw new Error('Please implement the remainingOrders function');
+  while (timeLeft > 0) {
+    let timeSpent = timeToMixJuice(orders[0]);
+    timeLeft = timeLeft - timeSpent;
+    orders.shift();
+  }
+
+  return orders;
 }
