@@ -6,7 +6,7 @@ import {
   gtcVersion,
 } from './amusement-park';
 
-describe('createVisitor', () => {
+xdescribe('createVisitor', () => {
   test('correctly assembles the visitor object', () => {
     const expected1 = { name: 'Imran Kudrna', age: 21, ticketId: 'ECMZR67C' };
     const expected2 = { name: 'Nālani Sansone', age: 76, ticketId: 'YX52GB06' };
@@ -18,7 +18,7 @@ describe('createVisitor', () => {
   });
 });
 
-xdescribe('revokeTicket', () => {
+describe('revokeTicket', () => {
   test('sets the ticketId to null', () => {
     const visitor = { name: 'María Pilar Neri', age: 16, ticketId: 'MFBSF3S2' };
 
@@ -44,7 +44,7 @@ xdescribe('revokeTicket', () => {
   });
 });
 
-xdescribe('ticketStatus', () => {
+describe('ticketStatus', () => {
   test('correctly identifies that a ticket is not in the tracking object', () => {
     expect(ticketStatus(testTickets(), 'Y4KXZOYM')).toBe('unknown ticket id');
     expect(ticketStatus(testTickets(), '8ATQC1ZJ')).toBe('unknown ticket id');
