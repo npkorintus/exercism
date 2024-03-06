@@ -7,14 +7,14 @@ import {
   normalizeScore,
 } from './high-score-board';
 
-xdescribe('createScoreBoard', () => {
+describe('createScoreBoard', () => {
   test('creates a new board with a test entry', () => {
     const expected = { 'The Best Ever': 1000000 };
     expect(createScoreBoard()).toEqual(expected);
   });
 });
 
-xdescribe('addPlayer', () => {
+describe('addPlayer', () => {
   test('adds a player and score to the board', () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
@@ -41,7 +41,7 @@ xdescribe('addPlayer', () => {
   });
 });
 
-xdescribe('removePlayer', () => {
+describe('removePlayer', () => {
   test('removes a player from the score board', () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
@@ -76,7 +76,7 @@ xdescribe('removePlayer', () => {
   });
 });
 
-xdescribe('updateScore', () => {
+describe('updateScore', () => {
   test("increases a player's score", () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
@@ -99,7 +99,7 @@ xdescribe('updateScore', () => {
   });
 });
 
-xdescribe('applyMondayBonus', () => {
+describe('applyMondayBonus', () => {
   test('adds 100 points for all players', () => {
     const scoreBoard = {
       'Amil Pastorius': 345,
