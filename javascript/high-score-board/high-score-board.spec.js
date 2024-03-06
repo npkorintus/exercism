@@ -14,7 +14,7 @@ xdescribe('createScoreBoard', () => {
   });
 });
 
-describe('addPlayer', () => {
+xdescribe('addPlayer', () => {
   test('adds a player and score to the board', () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
@@ -41,7 +41,7 @@ describe('addPlayer', () => {
   });
 });
 
-xdescribe('removePlayer', () => {
+describe('removePlayer', () => {
   test('removes a player from the score board', () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
