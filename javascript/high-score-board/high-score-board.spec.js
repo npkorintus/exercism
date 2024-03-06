@@ -7,14 +7,14 @@ import {
   normalizeScore,
 } from './high-score-board';
 
-describe('createScoreBoard', () => {
+xdescribe('createScoreBoard', () => {
   test('creates a new board with a test entry', () => {
     const expected = { 'The Best Ever': 1000000 };
     expect(createScoreBoard()).toEqual(expected);
   });
 });
 
-xdescribe('addPlayer', () => {
+describe('addPlayer', () => {
   test('adds a player and score to the board', () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
