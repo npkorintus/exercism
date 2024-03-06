@@ -99,7 +99,7 @@ xdescribe('updateScore', () => {
   });
 });
 
-describe('applyMondayBonus', () => {
+xdescribe('applyMondayBonus', () => {
   test('adds 100 points for all players', () => {
     const scoreBoard = {
       'Amil Pastorius': 345,
@@ -130,7 +130,7 @@ describe('applyMondayBonus', () => {
   });
 });
 
-xdescribe('normalizeScore', () => {
+describe('normalizeScore', () => {
   test('applies the normalization function', () => {
     const params = {
       score: 45,
