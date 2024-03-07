@@ -36,10 +36,10 @@ export function revokeTicket(visitor) {
  * @returns {string} ticket status
  */
 export function ticketStatus(tickets, ticketId) {
-  if (tickets[ticketId] === null)
-    return 'not sold';
-  else if (tickets[ticketId] !== null && tickets[ticketId] !== undefined)
+  if (tickets[ticketId])
     return `sold to ${tickets[ticketId]}`;
+  else if (tickets[ticketId] === null)
+    return 'not sold';
   else
     return 'unknown ticket id';
 }
@@ -53,10 +53,6 @@ export function ticketStatus(tickets, ticketId) {
  * @returns {string} ticket status
  */
 export function simpleTicketStatus(tickets, ticketId) {
-  // if (tickets[ticketId] !== null && tickets[ticketId] !== undefined)
-  //   return `${tickets[ticketId]}`;
-  // else
-  //   return 'invalid ticket !!!';
   return tickets[ticketId] ?? 'invalid ticket !!!';
 }
 
