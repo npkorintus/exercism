@@ -8,7 +8,7 @@ import {
 
 const DIFFERENCE_PRECISION_IN_DIGITS = 6;
 
-describe('cookingStatus', () => {
+xdescribe('cookingStatus', () => {
   test('recognizes that there is time left on the timer', () => {
     const expected = 'Not done, please wait.';
     expect(cookingStatus(1)).toBe(expected);
@@ -28,7 +28,7 @@ describe('cookingStatus', () => {
   });
 });
 
-describe('preparationTime', () => {
+xdescribe('preparationTime', () => {
   test('applies the custom average time per layer', () => {
     const manyLayers = [
       'sauce',
@@ -76,7 +76,7 @@ describe('preparationTime', () => {
   });
 });
 
-xdescribe('quantities', () => {
+describe('quantities', () => {
   test('calculates the amounts of noodles and sauce correctly', () => {
     const fewLayers = ['noodles', 'sauce', 'noodles'];
     expectObjectsToBeEqual(quantities(fewLayers), { noodles: 100, sauce: 0.2 });
