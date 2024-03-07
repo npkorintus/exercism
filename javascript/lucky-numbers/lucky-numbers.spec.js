@@ -1,6 +1,6 @@
 import { twoSum, luckyNumber, errorMessage } from './lucky-numbers';
 
-xdescribe('twoSum', () => {
+describe('twoSum', () => {
   test('sums the numbers correctly for short arrays', () => {
     const leftInput = [2, 4];
     const rightInput = [1, 5, 7];
@@ -14,7 +14,7 @@ xdescribe('twoSum', () => {
   });
 });
 
-xdescribe('luckyNumber', () => {
+describe('luckyNumber', () => {
   test('identifies palindromic numbers', () => {
     expect(luckyNumber(15651)).toBe(true);
     expect(luckyNumber(48911984)).toBe(true);
