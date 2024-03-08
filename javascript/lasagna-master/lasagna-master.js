@@ -45,7 +45,7 @@ export function preparationTime(layers, avgPrepTime = 2) {
  *
  * @param {string[]} layers
  *
- * @returns {object} quantity of noodles and sauce needed
+ * @returns {Record<string, number|null>} quantity of noodles and sauce needed
  */
 export function quantities(layers) {
   let ingredients = {
@@ -61,4 +61,36 @@ export function quantities(layers) {
   })
 
   return ingredients;
+}
+
+/**
+ * Add the secret ingredient
+ *
+ * @param {string[]} friendsList
+ * @param {string[]} myList
+ *
+ * @returns nothing
+ */
+export function addSecretIngredient(friendsList, myList) {
+  const secretIngredient = friendsList[friendsList.length - 1];
+  myList.push(secretIngredient);
+}
+
+/**
+ * Scale the recipe
+ *
+ * @param {Record<string, number>} recipe holds the amounts needed for 2 portions
+ * @param {number} portions
+ *
+ * @returns {Record<string, number>} recipe adjusted for number of portions desired
+ */
+export function scaleRecipe(recipe, portions) {
+  const scaledRecipe = {...recipe};
+  const multiplier = portions / 2;
+
+  for (const ingredient in recipe) {
+    scaledRecipe[ingredient] *= multiplier;
+  }
+
+  return scaledRecipe;
 }
