@@ -50,7 +50,7 @@ xdescribe('swapTopTwoCards', () => {
   });
 });
 
-describe('discardTopCard', () => {
+xdescribe('discardTopCard', () => {
   test('from a deck with one card', () => {
     expect(discardTopCard([7])).toStrictEqual([7, []]);
   });
@@ -60,7 +60,7 @@ describe('discardTopCard', () => {
   });
 });
 
-xdescribe('insertFaceCards', () => {
+describe('insertFaceCards', () => {
   test('into a deck with many cards', () => {
     expect(insertFaceCards([3, 10, 7])).toStrictEqual([
       3,
