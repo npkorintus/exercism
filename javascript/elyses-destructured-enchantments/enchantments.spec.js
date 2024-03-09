@@ -8,7 +8,7 @@ import {
   swapTopTwoCards,
 } from './enchantments';
 
-xdescribe('getFirstCard', () => {
+describe('getFirstCard', () => {
   test('from a deck with a single card', () => {
     expect(getFirstCard([3])).toBe(3);
   });
@@ -22,7 +22,7 @@ xdescribe('getFirstCard', () => {
   });
 });
 
-xdescribe('getSecondCard', () => {
+describe('getSecondCard', () => {
   test('from a deck with two cards', () => {
     expect(getSecondCard([10, 4])).toBe(4);
   });
@@ -40,7 +40,7 @@ xdescribe('getSecondCard', () => {
   });
 });
 
-xdescribe('swapTopTwoCards', () => {
+describe('swapTopTwoCards', () => {
   test('in a deck with two cards', () => {
     expect(swapTopTwoCards([3, 6])).toStrictEqual([6, 3]);
   });
@@ -50,7 +50,7 @@ xdescribe('swapTopTwoCards', () => {
   });
 });
 
-xdescribe('discardTopCard', () => {
+describe('discardTopCard', () => {
   test('from a deck with one card', () => {
     expect(discardTopCard([7])).toStrictEqual([7, []]);
   });
