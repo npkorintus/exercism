@@ -15,7 +15,9 @@
  *  translated coordinate pair in the form [x, y]
  */
 export function translate2d(dx, dy) {
-  throw new Error('Implement the translate2d function');
+  return function(x, y) {
+    return [dx + x, dy + y];
+  }
 }
 
 /**
@@ -29,7 +31,9 @@ export function translate2d(dx, dy) {
  *  scaled coordinate pair in the form [x, y]
  */
 export function scale2d(sx, sy) {
-  throw new Error('Implement the scale2d function');
+  return function(x, y) {
+    return [sx * x, sy * y];
+  }
 }
 
 /**
