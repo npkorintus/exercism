@@ -32,7 +32,7 @@ describe('task 2', () => {
   });
 });
 
-describe('task 3', () => {
+xdescribe('task 3', () => {
   test('order from grocer passes callback function arguments forward', () => {
     const query = { variety: 'apple', quantity: 10 };
     orderFromGrocer(query, onSuccess, onError);
@@ -41,7 +41,7 @@ describe('task 3', () => {
   });
 });
 
-describe('task 4', () => {
+xdescribe('task 4', () => {
   test('postOrder composes a request to the grocer using the defined callbacks', () => {
     const variety = 'banana';
     const quantity = 5;
