@@ -16,7 +16,7 @@ afterEach(() => {
   jest.resetAllMocks();
 });
 
-xdescribe('task 1', () => {
+describe('task 1', () => {
   test('onSuccess should call notify with a success message', () => {
     expect(onSuccess()).toEqual(undefined);
     expect(notify).toHaveBeenCalledTimes(1);
@@ -24,7 +24,7 @@ xdescribe('task 1', () => {
   });
 });
 
-xdescribe('task 2', () => {
+describe('task 2', () => {
   test('onError should call notify with an error message', () => {
     expect(onError()).toEqual(undefined);
     expect(notify).toHaveBeenCalledTimes(1);
